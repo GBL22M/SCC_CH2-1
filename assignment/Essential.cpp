@@ -19,14 +19,20 @@ float Avg(int sum, int size)
 
 int main()
 {
-	int board[5];
+	int N;
 
-	for (int i = 0; i < 5; ++i)
+	cout << "총 갯수: ";
+	cin >> N;
+
+	int* board = new int[N];
+
+	cout << "원하는 N개의 숫자를 입력하세요\n";
+	for (int i = 0; i < N; ++i)
 	{
 		cin >> board[i];
 	}
-	int sum = Sum(board, 5);
-	float avg = Avg(sum, 5);
+	int sum = Sum(board, N);
+	float avg = Avg(sum, N);
 
 	cout << "sum: " << sum << "\n" << "avg: " << avg << "\n";
 }
